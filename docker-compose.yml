@@ -1,0 +1,32 @@
+version: '3'
+services:
+
+ mydb:
+  image: postgres
+  volumes:
+   - ./postgresql:/var/lib/postgresql/data
+  ports:
+   - 5433:5432
+  environment:
+   - POSTGRES_USER=admin
+   - POSTGRES_PASSWORD=zegikniet
+   - POSTGRES_DB=testing
+
+ chrome:
+  image: selenium/standalone-chrome:latest
+  hostname: chrome
+  privileged: true
+  shm_size: 2g
+
+ flask_vuejs_app:
+  container_name: flask_vuejs_app
+  build: app
+  depends_on:
+   - mydb
+  restart: always
+  volumes:
+   - ./app/app:/app
+   - ./data:/app/protected
+  ports:
+   - "8008:8008"
+

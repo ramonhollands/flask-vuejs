@@ -1,0 +1,20 @@
+name: docker-compose-actions-workflow
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: docker-compose up -d
+      - name: Check docker containers 1
+        run: docker ps -a
+      - name: Sleep for 30 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '60s'
+      - name: Check docker containers 2
+        run: docker ps -a
+      - name: Test
+        #run: docker logs thebox_annotate
+        run: docker exec flask_vuejs_app sh /app/entrypoint_run_tests.sh

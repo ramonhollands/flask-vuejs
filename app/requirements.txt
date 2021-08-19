@@ -1,0 +1,10 @@
+Flask
+flask-sqlalchemy
+flask-migrate
+Flask-User
+email-validator
+sqlalchemy_utils
+selenium
+python-dotenv
+gunicorn[gevent]
+psycopg2-binary

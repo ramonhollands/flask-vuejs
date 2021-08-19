@@ -1,0 +1,43 @@
+{
+  "name": "agouti_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "static/index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fabric": "^4.4.0",
+    "moment": "^2.29.1",
+    "parse": "^2.18.0",
+    "uuid": "^3.4.0",
+    "vue": "^2.6.12",
+    "vue-select": "^3.11.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.3.0",
+    "webpack-manifest-plugin": "^3.0.0",
+    "webpack-nano": "^1.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack --env development=true",
+    "watch": "webpack --env development=true --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramonhollands/agouti_demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramonhollands/agouti_demo/issues"
+  },
+  "homepage": "https://github.com/ramonhollands/agouti_demo#readme"
+}

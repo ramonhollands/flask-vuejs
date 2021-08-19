@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+    <script src="{{ url_for('static', filename=jsAssets['users.js']) }}"></script>
+{% endblock %}
+
+{% block content %}
+    <h1 id="title" style="margin-bottom: 20px;">Manage users</h1>
+
+    <div id="app" style="margin-top:20px;">
+        <user-list></user-list>
+    </div>
+{% endblock %}
